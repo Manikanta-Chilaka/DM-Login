@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background: #FCF6F5;
+    height: 100vh;
+    overflow: hidden;
+}
+.loginpage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #990011;
+    border-radius: 12px;
+}
+.loginpage h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid black;
+    color: white;
+}
+.loginpage form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .signin{
+    position: relative;
+    border-bottom: 2px solid #FFFFD2;
+    margin: 30px 0;
+}
+.signin input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.signin label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: white;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.signin span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: silver;
+    color: #FFFFD2;
+}
+.signin input:focus ~ label,
+.signin input:valid ~ label{
+    top: -5px;
+    color: silver;
+}
+.signin input:focus ~ span::before,
+.signin input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: silver;
+    cursor: pointer;
+    
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #FFFFD2;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+}
+input[type="submit"]:hover{
+    border-color: black;
+    transition: .5s;
+}
+.signup{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: silver;
+}
+.signup a{
+    text-decoration: none;
+    color: #FFFFD2;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
